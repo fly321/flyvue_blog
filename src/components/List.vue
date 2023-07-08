@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header-main">
-      <div class="header-main__title">文章列表</div>
+      <div class="header-main__title">{{categoryName}}</div>
     </div>
 
     <div class="list">
@@ -34,6 +34,7 @@ export default {
   },
   data() {
     return {
+      categoryName: "文章列表",
       list:[
         {
           title: "article1",
