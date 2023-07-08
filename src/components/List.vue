@@ -8,7 +8,7 @@
           <el-button class="button" text>查看原文</el-button>
         </div>
       </template>
-      <div class="text item">{{ item.describe }}</div>
+      <div class="text item" v-for="o in 4">{{ item.describe }}</div>
     </el-card>
     <div class="box-image" :style="item.style">
     </div>
@@ -49,6 +49,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$radius:10px;
 .list{
   display: flex;
   justify-content: space-around;
@@ -77,6 +78,8 @@ export default {
 }
 .box-c1{
   flex-grow: 0.7;
+  border-radius: $radius 0 0 $radius;
+
 }
 .box-image{
   flex-grow: 0.3;
@@ -85,6 +88,8 @@ export default {
   background-repeat: no-repeat;
   background-origin: content-box;
   background-position: center;
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
 }
 @media screen and (max-width: 500px) {
 
