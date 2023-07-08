@@ -1,9 +1,10 @@
 <script setup>
 // import TheWelcome from '../components/TheWelcome.vue'
+import List from "@/components/List.vue";
 </script>
 
 <template>
   <main>
-    首页
+    <List />
   </main>
 </template>

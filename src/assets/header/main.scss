@@ -1,14 +1,13 @@
-$fontWhiteColor: #ffffff90;
+$fontWhiteColor: #ffffff95;
 .burger{
   display: none;
 }
 .burger div{
-  width: 25px;
-  height: 3px;
+  width: 30px;
+  height: 5px;
   background-color: white;
   margin: 3px;
 }
-
 .header{
   margin-top: 1rem;
   display: flex;
@@ -18,11 +17,13 @@ $fontWhiteColor: #ffffff90;
     font-weight: bold;
     color: $fontWhiteColor;
     flex: 1;
+    padding-left: 2rem;
   }
   .header__nav{
     display: flex;
     width: 300px;
     flex: 2;
+    padding-right: 2rem;
     ul{
       display: flex;
       justify-content: flex-end;

@@ -7,17 +7,19 @@
     .header__logo__text{
       position: relative;
       left: 1rem;
+      padding-left: 0rem;
     }
     .header__nav{
       ul{
         display: block;
         opacity: 1;
-        background: #00000090;
+        background-color: #00000090;
         height: calc(100vh - 60px);
         width: 50vw;
         position: absolute;
         top: 60px;
         left: -50vw;
+        background-attachment: fixed;
         //left: 0vw;
         li{
           text-align: left;
@@ -26,8 +28,8 @@
       }
       .burger{
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 30px;
+        right: 30px;
         width: 30px;
       }
     }

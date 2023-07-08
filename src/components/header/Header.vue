@@ -45,10 +45,10 @@ export default {
     openMenu(){
       this.menuExisted = !this.menuExisted;
       if (this.menuExisted) {
-        document.querySelector(".burger div:nth-child(1)").style.transform = "translate(4px, 6px) rotate(45deg)";
+        document.querySelector(".burger div:nth-child(1)").style.transform = "translate(5px, 5px) rotate(45deg)";
         document.querySelector(".burger div:nth-child(2)").style.opacity = "0";
         document.querySelector(".burger div:nth-child(2)").style.transform = "translateX(10px)";
-        document.querySelector(".burger div:nth-child(3)").style.transform = "translate(4px, -6px) rotate(-45deg)";
+        document.querySelector(".burger div:nth-child(3)").style.transform = "translate(5px, -11px) rotate(-45deg)";
         document.querySelector(".header__nav ul").style.animation = "slideIn 0.5s ease-in-out forwards";
       } else {
         document.querySelector(".burger div:nth-child(1)").style.transform = "translate(0, 0) rotate(0)";
