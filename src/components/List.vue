@@ -1,7 +1,7 @@
 <template>
   <div class="list">
     <div class="box-card"  v-for="item in list">
-    <el-card shadow="always" class="box-c1">
+    <el-card class="box-c1">
       <template #header>
         <div class="card-header">
           <span>{{item.title}}</span>
@@ -75,12 +75,15 @@ $radius:10px;
   margin-top: 30px;
   width: 1000px;
   display: flex;
+  outline-offset: -20px;
+}
+.box-card:hover{
+  box-shadow: 0 0 30px 0 #8fd3f4;
 }
 .box-c1{
   flex-grow: 0.7;
   border-radius: $radius 0 0 $radius;
-  min-height:500px;
-
+  min-height:350px;
 }
 .box-image{
   flex-grow: 0.3;
