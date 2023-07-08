@@ -5,7 +5,7 @@
     </div>
     <div class="header__nav">
       <ul>
-        <li v-for="_menu in MenuList"><a :href="_menu.path">{{_menu.name}}</a></li>
+        <li v-for="_menu in MenuList"><a href="javascript:void(0)"  @click="gotoUrl(_menu.path)">{{_menu.name}}</a></li>
       </ul>
       <div class="burger" @click="openMenu">
         <div class="top-line"></div>
@@ -59,6 +59,9 @@ export default {
         document.querySelector(".header__nav ul").style.animation = "";
         document.querySelector(".header__nav ul").style.animation = "slideOut 0.5s ease-in-out forwards";
       }
+    },
+    gotoUrl(url){
+      this.$router.push(url);
     }
   },
 }
