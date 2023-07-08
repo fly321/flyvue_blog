@@ -50,7 +50,11 @@ export default {
             backgroundImage:"url('https://api.eyabc.cn/api/picture/dong_man_wap?"+Math.random()+"')",
           }
         },
-      ]
+      ],
+      current: 1,
+      cursor: 0,
+      pageSize: 10,
+      max: 0,
     };
   },
   methods: {},
