@@ -102,6 +102,7 @@ $radius:10px;
   .box-c1{
     flex-grow: 1;
     min-height: 0;
+    border-radius: $radius;
   }
 }
 
