@@ -13,26 +13,17 @@
 </template>
 <script>
 //vue3.0 setup语法
-import { ref, onMounted, onUnmounted } from "vue";
 export default {
   name: "List",
   components: {},
   props: {},
-  setup() {
-    const list = ref([]);
-    const getList = () => {
-
-    };
-    onMounted(() => {
-      getList();
-    });
-    onUnmounted(() => {});
-    return {
-      list,
-    };
+  mounted() {
+    console.log(this.$route.query);
   },
   data() {
-    return {};
+    return {
+
+    };
   },
   methods: {},
 };

@@ -5,7 +5,7 @@
     </div>
     <div class="header__nav">
       <ul>
-        <li v-for="_menu in MenuList"><a href="javascript:void(0)"  @click="gotoUrl(_menu.path)">{{_menu.name}}</a></li>
+        <li v-for="_menu in MenuList"><a href="javascript:void(0)"  @click="gotoUrl(_menu.path, _menu.query)">{{_menu.name}}</a></li>
       </ul>
       <div class="burger" @click="openMenu">
         <div class="top-line"></div>
@@ -28,15 +28,31 @@ export default {
         {
           name: "首页",
           path: "/",
+          query: {
+
+          },
         },
         {
-          name: "分类1",
+          name: "菜单1",
           path: "/about",
+          query: {
+            category: "1",
+          }
         },
         {
           name: "分类2",
-          path: "/contact",
+          path: "/list",
+          query: {
+            category: "2",
+          }
         },
+        {
+          name: "友情链接",
+          path: "/link",
+          query: {
+            category: "3",
+          }
+        }
       ],
       menuExisted: false,
     };
@@ -60,8 +76,11 @@ export default {
         document.querySelector(".header__nav ul").style.animation = "slideOut 0.5s ease-in-out forwards";
       }
     },
-    gotoUrl(url){
-      this.$router.push(url);
+    gotoUrl(url, query=undefined){
+      this.$router.push({
+        path: url,
+        query: query,
+      });
     }
   },
 }
