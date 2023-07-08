@@ -79,6 +79,7 @@ $radius:10px;
 .box-c1{
   flex-grow: 0.7;
   border-radius: $radius 0 0 $radius;
+  min-height:500px;
 
 }
 .box-image{
@@ -91,8 +92,14 @@ $radius:10px;
   border-bottom-right-radius: $radius;
   border-top-right-radius: $radius;
 }
-@media screen and (max-width: 500px) {
-
+@media screen and (max-width: 1200px) {
+  .box-image{
+    flex-grow: 0;
+  }
+  .box-c1{
+    flex-grow: 1;
+    min-height: 0;
+  }
 }
 
 </style>
