@@ -1,17 +1,16 @@
 <template>
   <div class="list">
-    <div class="box-card"  v-for="i in 3">
+    <div class="box-card"  v-for="item in list">
     <el-card shadow="always" class="box-c1">
       <template #header>
         <div class="card-header">
-          <span>博文{{i}}</span>
+          <span>{{item.title}}</span>
           <el-button class="button" text>查看原文</el-button>
         </div>
       </template>
-      <div v-for="o in 4" :key="o" class="text item">{{ 'List item ' + o }}</div>
+      <div class="text item">{{ item.describe }}</div>
     </el-card>
-    <div class="box-image" style="background:url('https://api.eyabc.cn/storage/dong_man_wap/5a8db3d996823ffec8baa185e268124b.jpg') no-repeat center/cover ">
-
+    <div class="box-image" :style="item.style">
     </div>
     </div>
   </div>
@@ -27,7 +26,22 @@ export default {
   },
   data() {
     return {
-
+      list:[
+        {
+          title: "article1",
+          describe: "描述1",
+          style:{
+            backgroundImage:"url('https://api.eyabc.cn/api/picture/dong_man_wap?1')",
+          }
+        },
+        {
+          title: "article2",
+          describe: "描述2",
+          style:{
+            backgroundImage:"url('https://api.eyabc.cn/api/picture/dong_man_wap?2')",
+          }
+        },
+      ]
     };
   },
   methods: {},
@@ -66,6 +80,11 @@ export default {
 }
 .box-image{
   flex-grow: 0.3;
+  background-size: cover;
+  background-clip: content-box;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: center;
 }
 @media screen and (max-width: 500px) {
 
