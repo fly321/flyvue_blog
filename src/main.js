@@ -10,8 +10,9 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
-// 引入naive-ui
-import naive from 'naive-ui'
-app.use(naive)
+// 引入emement-plus
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+app.use(ElementPlus)
 
 app.mount('#app')

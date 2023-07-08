@@ -58,7 +58,6 @@ export default {
         document.querySelector(".header__nav ul").style.transform = "translateX(-50vw)";
         document.querySelector(".header__nav ul").style.animation = "";
         document.querySelector(".header__nav ul").style.animation = "slideOut 0.5s ease-in-out forwards";
-
       }
     }
   },
@@ -99,7 +98,7 @@ export default {
         width: 100%;
         li{
           list-style: none;
-          margin-left: 20px;
+          margin-left: 30px;
           a{
             color: $fontWhiteColor;
             text-decoration: none;
