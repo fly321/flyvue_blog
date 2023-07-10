@@ -52,6 +52,13 @@ export default {
     getList(){
       list(this.cursor, this.pageSize, this.query).then(res => {
         let data = res.data.data;
+        if (res.data.code !== 200) {
+          this.$message.error(res.data.message);
+          return;
+        }else if (res.data.data.length === 0) {
+          this.$message.error("暂无数据！");
+          return;
+        }
         data.forEach(item => {
           item.style = {
             backgroundImage: `url(${item.image})`
