@@ -33,7 +33,7 @@ export default {
   components: {},
   props: {},
   mounted() {
-    console.log(this.$route.query);
+    this.query = this.$route.query;
     this.getList();
   },
   data() {

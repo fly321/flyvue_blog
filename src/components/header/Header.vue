@@ -36,21 +36,21 @@ export default {
           name: "菜单1",
           path: "/about",
           query: {
-            category: "1",
+            category_id: "1",
           }
         },
         {
           name: "分类2",
           path: "/list",
           query: {
-            category: "2",
+            category_id: "2",
           }
         },
         {
           name: "友情链接",
           path: "/link",
           query: {
-            category: "3",
+            category_id: "3",
           }
         }
       ],
