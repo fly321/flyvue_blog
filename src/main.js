@@ -7,8 +7,11 @@ import App from './App.vue'
 import router from './router'
 
 const app = createApp(App)
+import piniaPlugin from './assets/pinia/index.js'
+app.use(piniaPlugin)
 
-app.use(createPinia())
+import axiosPlugin from './assets/axios/index.js'
+app.use(axiosPlugin)
 app.use(router)
 // 引入emement-plus
 import ElementPlus from 'element-plus'

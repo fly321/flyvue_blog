@@ -31,6 +31,20 @@ export default {
   props: {},
   mounted() {
     console.log(this.$route.query);
+    this.$axios
+      .get("/api/article/list", {
+        params: {
+          page: this.$route.query.page || 1,
+          pageSize: this.pageSize,
+        },
+      })
+      .then((res) => {
+        console.log(res);
+        this.list = res.data.data.list;
+        this.max = res.data.data.max;
+      }).catch((err)=>{
+        console.log(err);
+      })
   },
   data() {
     return {
